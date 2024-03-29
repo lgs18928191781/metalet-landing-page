@@ -12,10 +12,9 @@ const solgans = [
   "One Wallet for All Bitcoin Ecosystems",
   "Lightweight and Fast",
   "Supports Android, iOS and Chrome",
-  "Supports BTC and Bitcoin side chain MVC",
+  "Supports BTC and Bitcoin sidechain MVC",
   "Supports Ordinals, BRC20, MVC20, MetaID and other protocols (Runes will be launched soon)",
   "Supports Ordinal NFT",
-  "Supports BRC-20 & MVC-20 New token",
   "Supports MetaID Connect",
 ];
 
