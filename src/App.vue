@@ -97,7 +97,7 @@ const show = ref(false);
             class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3"
           >
             <img class="w-6" :src="ChromeIcon" alt="" />
-            <span>Downlaod</span>
+            <span>Download</span>
           </a>
           <a
             target="_blank"
