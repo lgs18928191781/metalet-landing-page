@@ -18,9 +18,14 @@
 
 body {
   @apply m-0 w-full;
-  background: linear-gradient(180deg, #d9f6ff 9%, #ffffff 100%);
+  background: linear-gradient(180deg, #d9f6ff 9%, #ffffff 100%) 
+}
+
+body.white {
+  @apply m-0 w-full;
+  background: #ffffff;
 }
 
 #app {
-  @apply px-5 mx-auto my-0 max-w-[1280px] box-border;
+  @apply mx-auto my-0 max-w-[1280px] box-border;
 }

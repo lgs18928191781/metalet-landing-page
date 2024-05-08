@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'black-primary': '#303133',
+        'gray-primary': '#909399',
         'blue-primary': '#1719FF'
       },
       height: {
