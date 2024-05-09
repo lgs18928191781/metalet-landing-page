@@ -17,7 +17,7 @@ onBeforeUnmount(() => {
       <img
         :src="ArrowLeftIcon"
         alt=""
-        @click="$router.back()"
+        @click="$router.replace('/')"
         class="cursor-pointer" />
       <h4 class="text-2xl">Terms of Service</h4>
     </div>
