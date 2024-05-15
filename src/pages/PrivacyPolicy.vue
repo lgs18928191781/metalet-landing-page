@@ -64,12 +64,12 @@ onBeforeUnmount(() => {
         unless:
       </p>
       <ul class="pl-4 text-gray-primary">
-        <li class="list-disc">You have explicitly consented;</li>
+        <li class="list-disc">You have explicitly consented.</li>
         <li class="list-disc">
-          Required by law or by government law enforcement bodies;
+          Required by law or by government law enforcement bodies.
         </li>
         <li class="list-disc">
-          To protect the lawful rights and interests of Metalet and its users;
+          To protect the lawful rights and interests of Metalet and its users.
         </li>
         <li class="list-disc">
           In the event of a merger, acquisition, asset transfer, or bankruptcy
