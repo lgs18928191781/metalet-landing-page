@@ -2,13 +2,13 @@
 import NFTIcon from "@/assets/NFT.png";
 import CheckIcon from "@/assets/Check.svg";
 import MobileIcon from "@/assets/Mobile.png";
-import ChromeIcon from "@/assets/Chrome.svg";
+import ChromeIcon from "@/assets/Chrome.png";
 import MetaPInIcon from "@/assets/MetaPin.png";
 import BitcoinIcon from "@/assets/bitcoin.svg";
 import BlueFireIcon from "@/assets/blue-fire.svg";
-import AndroidAPKIcon from "@/assets/Android.svg";
-import AppleStoreIcon from "@/assets/AppleStore.svg";
-import GooglePlayIcon from "@/assets/GooglePlay.svg";
+import AndroidAPKIcon from "@/assets/Android.png";
+import AppleStoreIcon from "@/assets/AppleStore.png";
+import GooglePlayIcon from "@/assets/GooglePlay.png";
 import MetaletMobileIcon from "@/assets/MetaletMobile.png";
 import AISNIcon from "@/assets/brc20/AISN@2x.png";
 import BTCsIcon from "@/assets/brc20/BTCs@2x.png";
@@ -48,17 +48,17 @@ const slogans = [
   <main class="m-w-[1200px]">
     <div class="space-y-[30px] pb-[100px]">
       <div
-        class="pt-10 flex items-center flex-col-reverse xl:flex-row gap-20 xl:gap-0  xl:justify-between">
+        class="pt-10 flex items-center flex-col xl:flex-row gap-20 xl:gap-0 xl:justify-between">
         <div class="pt-[1.5px] flex flex-col items-start">
           <h1 class="text-4xl lg:text-[50px] lg:leading-[60px] font-bold">
             <span>One Wallet for All</span>
             <span class="flex items-center">
-              <img class="w-9" :src="BitcoinIcon" alt="" />
-              <span class="text-[#F7931A]">Bitcoin</span>
+              <img class="w-12" :src="BitcoinIcon" alt="" />
+              <span class="text-[#F7931A]">&nbsp;Bitcoin</span>
               <span>&nbsp;Ecosystems</span>
             </span>
           </h1>
-          <div class="w-full space-y-5 mt-[34px]">
+          <div class="w-full space-y-5 mt-[34px] hidden xl:block">
             <div
               :key="index"
               v-for="(slogan, index) in slogans"
@@ -72,6 +72,19 @@ const slogans = [
           </div>
         </div>
         <img :src="MobileIcon" class="w-[500px]" />
+      </div>
+
+      <div class="w-full space-y-5 mt-[34px] block xl:hidden">
+        <div
+          :key="index"
+          v-for="(slogan, index) in slogans"
+          class="flex items-start gap-x-[20.61px]">
+          <div
+            class="bg-[#EAF2FA] w-[26px] aspect-square rounded-full flex items-center justify-center shrink-0">
+            <img :src="CheckIcon" alt="" class="w-2.5" />
+          </div>
+          <span class="sm:text-xl">{{ slogan }}</span>
+        </div>
       </div>
 
       <!-- download button -->
@@ -109,64 +122,71 @@ const slogans = [
     </div>
 
     <div class="pt-[60px]">
-      <h4 class="text-center font-semibold text-2xl md:text-5xl">Ease To Use</h4>
+      <h4 class="text-center font-semibold text-2xl md:text-5xl">
+        Ease To Use
+      </h4>
       <p class="mt-4 text-[#A4AFC0] text-xl text-center">
         The Bitcoin Ecosystem wallet you've been anticipating.
       </p>
       <div class="mt-[60px] grid grid-cols-3 xl:gap-8 gap-4">
         <div
           class="lg:col-span-1 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative">
-          <h6 class="text-[30px] font-semibold">NFT</h6>
+          <h6 class="text-[30px] font-semibold text-2xl">NFT</h6>
           <p class="text-[#A4AFC0]">Support Ordinal NFT</p>
-          <img :src="NFTIcon" alt="" class="lg:w-auto md:w-[50%] w-[80%] ml-auto" />
+          <img
+            :src="NFTIcon"
+            alt=""
+            class="lg:w-auto md:w-[50%] w-[80%] ml-auto" />
         </div>
-        <div class="lg:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
+        <div
+          class="lg:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
           <h6 class="text-[30px] font-semibold">BRC20 and MRC20</h6>
           <p class="text-[#A4AFC0] max-w-[332px]">
             Support for minting BRC20 and the rapid, real-time transfer of MRC20
             tokens.
           </p>
           <div class="mt-10 pb-4 flex flex-col items-end px-5 lg:gap-y-2">
-            <div class="flex items-center gap-x-6">
-              <img :src="ordiIcon" alt="" class="md:size-12 size-8" />
-              <img :src="satsIcon" alt="" class="md:size-12 size-8" />
-              <img :src="BTCsIcon" alt="" class="md:size-12 size-8" />
-              <img :src="ratsIcon" alt="" class="md:size-12 size-8" />
-              <img :src="piinIcon" alt="" class="md:size-12 size-8" />
-              <img :src="ordersIcon" alt="" class="md:size-12 size-8" />
-              <img :src="coreIcon" alt="" class="md:size-12 size-8" />
-              <img :src="satsIcon" alt="" class="md:size-12 size-8" />
+            <div class="flex items-center gap-x-3 xs:gap-x-6">
+              <img :src="ordiIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="satsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="BTCsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="ratsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="piinIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="ordersIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="coreIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="satsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
             </div>
-            <div class="flex items-center gap-x-6">
-              <img :src="πIcon" alt="" class="md:size-12 size-8" />
-              <img :src="kormIcon" alt="" class="md:size-12 size-8" />
-              <img :src="ligoIcon" alt="" class="md:size-12 size-8" />
-              <img :src="eorbIcon" alt="" class="md:size-12 size-8" />
-              <img :src="inscIcon" alt="" class="md:size-12 size-8" />
-              <img :src="mermcon" alt="" class="md:size-12 size-8" />
-              <img :src="moonIcon" alt="" class="md:size-12 size-8" />
-              <img :src="πtsIcon" alt="" class="md:size-12 size-8" />
+            <div class="flex items-center gap-x-3 xs:gap-x-6">
+              <img :src="πIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="kormIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="ligoIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="eorbIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="inscIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="mermcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="moonIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="πtsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
               <div class="w-1"></div>
             </div>
-            <div class="flex items-center gap-x-6 ml-8">
-              <img :src="AISNIcon" alt="" class="md:size-12 size-8" />
-              <img :src="WIcon" alt="" class="md:size-12 size-8" />
-              <img :src="wzrdIcon" alt="" class="md:size-12 size-8" />
-              <img :src="PUPSIcon" alt="" class="md:size-12 size-8" />
-              <img :src="ORDGIcon" alt="" class="md:size-12 size-8" />
-              <img :src="SHIDIcon" alt="" class="md:size-12 size-8" />
-              <img :src="cowsIcon" alt="" class="md:size-12 size-8" />
-              <img :src="NODEIcon" alt="" class="md:size-12 size-8" />
+            <div class="flex items-center gap-x-3 xs:gap-x-6 ml-8">
+              <img :src="AISNIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="WIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="wzrdIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="PUPSIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="ORDGIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="SHIDIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="cowsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img :src="NODEIcon" alt="" class="sm:size-8 md:size-12 size-6" />
             </div>
           </div>
         </div>
-        <div class="col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
+        <div class="col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative overflow-hidden">
           <h6 class="text-[30px] font-semibold">MetaID PIN</h6>
-          <p class="text-[#A4AFC0]">
+          <p class="text-[#A4AFC0] max-w-[428px]">
             A MetaID PIN is a unique identifier associated with a user's
             on-chain activities within the MetaID ecosystem
           </p>
           <img :src="MetaPInIcon" alt="" class="ml-auto md:w-[80%]" />
+          <!-- <div class="absolute bg-[#171AFF] w-[481px] h-[462px] -bottom-40" style="filter: blur(82px);"></div> -->
         </div>
       </div>
     </div>
@@ -180,7 +200,8 @@ const slogans = [
         diverse array of fascinating decentralized applications with just one
         seamless connection.
       </p>
-      <div class="bg-white rounded-xl pt-[30px] pl-[30px] mt-[60px] flex items-center lg:flex-row flex-col">
+      <div
+        class="bg-white rounded-xl pt-[30px] pl-[30px] mt-[60px] flex items-center lg:flex-row flex-col">
         <div class="flex flex-col gap-y-[18px] items-start">
           <div class="flex items-center gap-x-2">
             <img :src="BlueFireIcon" alt="" class="w-5" />
