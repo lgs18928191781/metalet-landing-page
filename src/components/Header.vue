@@ -6,7 +6,11 @@ const show = ref(false);
 </script>
 
 <template>
-  <header>
+  <header
+    class="lg:w-[1046px] w-full border px-8 py-6 rounded-full border-blue-primary"
+    style="
+      /* border-image: linear-gradient(180deg, #99a6ff 0%, #adf4ff 100%) 1; */
+    ">
     <div class="flex items-center justify-between">
       <router-link to="/" class="flex items-center gap-1 cursor-pointer">
         <img src="/metalet.svg" class="w-[38px]" alt="Metalet" />
@@ -28,7 +32,7 @@ const show = ref(false);
         <a
           target="_blank"
           href="https://chromewebstore.google.com/detail/metalet/lbjapbcmmceacocpimbpbidpgmlmoaao"
-          class="text-white w-24 h-[27px] leading-[27px] text-center text-xs bg-blue-primary rounded-[28px] inline-block font-bold">
+          class="text-white text-center text-xs bg-blue-primary rounded-[28px] inline-block font-bold px-[30px] py-3.5">
           Download
         </a>
       </div>

@@ -3,7 +3,7 @@ import Header from "@/components/Header.vue";
 </script>
 
 <template>
-  <div class="w-full min-h-screen relative pt-6 px-5 flex flex-col">
+  <div class="w-full min-h-screen relative pt-6 px-5 flex flex-col items-center">
     <Header />
 
     <router-view></router-view>
