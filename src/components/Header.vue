@@ -7,7 +7,7 @@ const show = ref(false);
 
 <template>
   <header
-    class="lg:w-[1046px] w-full border px-8 py-6 rounded-full border-blue-primary"
+    class="lg:w-[1046px] w-full border md:px-8 px-4 md:py-6 py-3 rounded-full border-blue-primary"
     style="
       /* border-image: linear-gradient(180deg, #99a6ff 0%, #adf4ff 100%) 1; */
     ">

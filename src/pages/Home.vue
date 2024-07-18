@@ -48,7 +48,7 @@ const slogans = [
   <main class="m-w-[1200px]">
     <div class="space-y-[30px] pb-[100px]">
       <div
-        class="pt-10 flex items-center flex-col gap-20 xl:gap-0 xl:flex-row xl:justify-between">
+        class="pt-10 flex items-center flex-col-reverse xl:flex-row gap-20 xl:gap-0  xl:justify-between">
         <div class="pt-[1.5px] flex flex-col items-start">
           <h1 class="text-4xl lg:text-[50px] lg:leading-[60px] font-bold">
             <span>One Wallet for All</span>
@@ -109,7 +109,7 @@ const slogans = [
     </div>
 
     <div class="pt-[60px]">
-      <h4 class="text-center font-semibold text-5xl">Ease To Use</h4>
+      <h4 class="text-center font-semibold text-2xl md:text-5xl">Ease To Use</h4>
       <p class="mt-4 text-[#A4AFC0] text-xl text-center">
         The Bitcoin Ecosystem wallet you've been anticipating.
       </p>
@@ -118,7 +118,7 @@ const slogans = [
           class="lg:col-span-1 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative">
           <h6 class="text-[30px] font-semibold">NFT</h6>
           <p class="text-[#A4AFC0]">Support Ordinal NFT</p>
-          <img :src="NFTIcon" alt="" class="lg:w-auto w-[50%] ml-auto" />
+          <img :src="NFTIcon" alt="" class="lg:w-auto md:w-[50%] w-[80%] ml-auto" />
         </div>
         <div class="lg:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
           <h6 class="text-[30px] font-semibold">BRC20 and MRC20</h6>
@@ -126,36 +126,37 @@ const slogans = [
             Support for minting BRC20 and the rapid, real-time transfer of MRC20
             tokens.
           </p>
-          <div class="mt-10 pb-4">
-            <div class="flex items-center gap-x-6 ml-8">
-              <img :src="ordiIcon" alt="" class="size-12" />
-              <img :src="satsIcon" alt="" class="size-12" />
-              <img :src="BTCsIcon" alt="" class="size-12" />
-              <img :src="ratsIcon" alt="" class="size-12" />
-              <img :src="piinIcon" alt="" class="size-12" />
-              <img :src="ordersIcon" alt="" class="size-12" />
-              <img :src="coreIcon" alt="" class="size-12" />
-              <img :src="satsIcon" alt="" class="size-12" />
+          <div class="mt-10 pb-4 flex flex-col items-end px-5 lg:gap-y-2">
+            <div class="flex items-center gap-x-6">
+              <img :src="ordiIcon" alt="" class="md:size-12 size-8" />
+              <img :src="satsIcon" alt="" class="md:size-12 size-8" />
+              <img :src="BTCsIcon" alt="" class="md:size-12 size-8" />
+              <img :src="ratsIcon" alt="" class="md:size-12 size-8" />
+              <img :src="piinIcon" alt="" class="md:size-12 size-8" />
+              <img :src="ordersIcon" alt="" class="md:size-12 size-8" />
+              <img :src="coreIcon" alt="" class="md:size-12 size-8" />
+              <img :src="satsIcon" alt="" class="md:size-12 size-8" />
             </div>
             <div class="flex items-center gap-x-6">
-              <img :src="πIcon" alt="" class="size-12" />
-              <img :src="kormIcon" alt="" class="size-12" />
-              <img :src="ligoIcon" alt="" class="size-12" />
-              <img :src="eorbIcon" alt="" class="size-12" />
-              <img :src="inscIcon" alt="" class="size-12" />
-              <img :src="mermcon" alt="" class="size-12" />
-              <img :src="moonIcon" alt="" class="size-12" />
-              <img :src="πtsIcon" alt="" class="size-12" />
+              <img :src="πIcon" alt="" class="md:size-12 size-8" />
+              <img :src="kormIcon" alt="" class="md:size-12 size-8" />
+              <img :src="ligoIcon" alt="" class="md:size-12 size-8" />
+              <img :src="eorbIcon" alt="" class="md:size-12 size-8" />
+              <img :src="inscIcon" alt="" class="md:size-12 size-8" />
+              <img :src="mermcon" alt="" class="md:size-12 size-8" />
+              <img :src="moonIcon" alt="" class="md:size-12 size-8" />
+              <img :src="πtsIcon" alt="" class="md:size-12 size-8" />
+              <div class="w-1"></div>
             </div>
             <div class="flex items-center gap-x-6 ml-8">
-              <img :src="AISNIcon" alt="" class="size-12" />
-              <img :src="WIcon" alt="" class="size-12" />
-              <img :src="wzrdIcon" alt="" class="size-12" />
-              <img :src="PUPSIcon" alt="" class="size-12" />
-              <img :src="ORDGIcon" alt="" class="size-12" />
-              <img :src="SHIDIcon" alt="" class="size-12" />
-              <img :src="cowsIcon" alt="" class="size-12" />
-              <img :src="NODEIcon" alt="" class="size-12" />
+              <img :src="AISNIcon" alt="" class="md:size-12 size-8" />
+              <img :src="WIcon" alt="" class="md:size-12 size-8" />
+              <img :src="wzrdIcon" alt="" class="md:size-12 size-8" />
+              <img :src="PUPSIcon" alt="" class="md:size-12 size-8" />
+              <img :src="ORDGIcon" alt="" class="md:size-12 size-8" />
+              <img :src="SHIDIcon" alt="" class="md:size-12 size-8" />
+              <img :src="cowsIcon" alt="" class="md:size-12 size-8" />
+              <img :src="NODEIcon" alt="" class="md:size-12 size-8" />
             </div>
           </div>
         </div>
@@ -165,13 +166,13 @@ const slogans = [
             A MetaID PIN is a unique identifier associated with a user's
             on-chain activities within the MetaID ecosystem
           </p>
-          <img :src="MetaPInIcon" alt="" class="ml-auto" />
+          <img :src="MetaPInIcon" alt="" class="ml-auto md:w-[80%]" />
         </div>
       </div>
     </div>
 
     <div class="pt-[90px] pb-[122px]">
-      <h4 class="text-center font-semibold text-5xl">
+      <h4 class="text-center font-semibold text-2xl md:text-5xl">
         Web3 application market
       </h4>
       <p class="mt-3 text-[#A4AFC0] text-xl text-center">
@@ -189,7 +190,7 @@ const slogans = [
               NEW
             </div>
           </div>
-          <h4 class="text-center font-semibold text-5xl">
+          <h4 class="text-center font-semibold text-2xl md:text-5xl">
             Seamless connection
           </h4>
           <p class="text-[#A4AFC0] text-xl">
