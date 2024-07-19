@@ -53,7 +53,7 @@ const slogans = [
           <h1 class="text-4xl lg:text-[50px] lg:leading-[60px] font-bold">
             <span>One Wallet for All</span>
             <span class="flex items-center">
-              <img class="w-12" :src="BitcoinIcon" alt="" />
+              <img class="lg:w-12 w-9" :src="BitcoinIcon" alt="" />
               <span class="text-[#F7931A]">&nbsp;Bitcoin</span>
               <span>&nbsp;Ecosystems</span>
             </span>
@@ -67,7 +67,7 @@ const slogans = [
                 class="bg-[#EAF2FA] w-[26px] aspect-square rounded-full flex items-center justify-center shrink-0">
                 <img :src="CheckIcon" alt="" class="w-2.5" />
               </div>
-              <span class="sm:text-xl">{{ slogan }}</span>
+              <span class="sm:text-xl text-balance">{{ slogan }}</span>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ const slogans = [
             class="bg-[#EAF2FA] w-[26px] aspect-square rounded-full flex items-center justify-center shrink-0">
             <img :src="CheckIcon" alt="" class="w-2.5" />
           </div>
-          <span class="sm:text-xl">{{ slogan }}</span>
+          <span class="sm:text-xl text-balance">{{ slogan }}</span>
         </div>
       </div>
 
@@ -152,7 +152,10 @@ const slogans = [
               <img :src="BTCsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
               <img :src="ratsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
               <img :src="piinIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="ordersIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img
+                :src="ordersIcon"
+                alt=""
+                class="sm:size-8 md:size-12 size-6" />
               <img :src="coreIcon" alt="" class="sm:size-8 md:size-12 size-6" />
               <img :src="satsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
             </div>
@@ -179,7 +182,8 @@ const slogans = [
             </div>
           </div>
         </div>
-        <div class="col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative overflow-hidden">
+        <div
+          class="col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative overflow-hidden">
           <h6 class="text-[30px] font-semibold">MetaID PIN</h6>
           <p class="text-[#A4AFC0] max-w-[428px]">
             A MetaID PIN is a unique identifier associated with a user's
@@ -195,7 +199,7 @@ const slogans = [
       <h4 class="text-center font-semibold text-2xl md:text-5xl">
         Web3 application market
       </h4>
-      <p class="mt-3 text-[#A4AFC0] text-xl text-center">
+      <p class="mt-3 text-[#A4AFC0] text-xl text-center text-balance">
         Unleash the full potential of the decentralized world by accessing a
         diverse array of fascinating decentralized applications with just one
         seamless connection.
