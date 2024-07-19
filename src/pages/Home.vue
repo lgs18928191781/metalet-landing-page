@@ -38,7 +38,7 @@ const slogans = [
   "Lightweight and Fast",
   "Supports Android, iOS and Chrome",
   "Supports BTC and Bitcoin sidechain MVC",
-  "Supports Ordinals, BRC20, MRC20, MVC20, MetaID PIN, MetaID and other protocols (Runes will be launched soon)",
+  "Supports Ordinals, BRC20, Runes, MRC20, MVC20, MetaID PIN, MetaID and other protocols",
   "Supports Ordinal NFT",
   "Support MetaID to connect with DApps",
 ];
