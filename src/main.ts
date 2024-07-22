@@ -3,6 +3,10 @@ import App from "./App.vue";
 import { createApp } from "vue";
 import * as VueRouter from "vue-router";
 
+window.addEventListener("vite:preloadError", () => {
+  window.location.reload(); // for example, refresh the page
+});
+
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
   routes: [
