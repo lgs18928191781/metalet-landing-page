@@ -122,90 +122,162 @@ const slogans = [
     </div>
 
     <div class="pt-[60px]">
-      <h4 class="text-center font-semibold text-2xl md:text-5xl">
-        Ease To Use
-      </h4>
-      <p class="mt-4 text-[#A4AFC0] text-xl text-center">
+      <h4 class="title text-center">Ease To Use</h4>
+      <p class="mt-4 sub-title text-center">
         The Bitcoin Ecosystem wallet you've been anticipating.
       </p>
       <div class="mt-[60px] grid grid-cols-3 xl:gap-8 gap-4">
         <div
-          class="lg:col-span-1 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative">
-          <h6 class="text-[30px] font-semibold text-2xl">NFT</h6>
-          <p class="text-[#A4AFC0]">Support Ordinal NFT</p>
+          class="lg:col-span-1 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative flex flex-col sm:flex-row lg:flex-col">
+          <div>
+            <h6 class="inner-title">NFT</h6>
+            <p class="inner-sub-title mt-1.5">Support Ordinal NFT</p>
+          </div>
           <img
             :src="NFTIcon"
             alt=""
-            class="lg:w-auto md:w-[50%] w-[80%] ml-auto" />
+            class="w-[300px] ml-auto mt-auto" />
         </div>
         <div
           class="lg:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
-          <h6 class="text-[30px] font-semibold">BRC20 and MRC20</h6>
-          <p class="text-[#A4AFC0] max-w-[332px]">
+          <h6 class="inner-title">BRC20 and MRC20</h6>
+          <p class="inner-sub-title max-w-[400px] mt-1.5">
             Support for minting BRC20 and the rapid, real-time transfer of MRC20
             tokens.
           </p>
-          <div class="mt-10 pb-4 flex flex-col items-end px-5 lg:gap-y-2">
+          <div
+            class="mt-5 lg:mt-10 pb-4 flex flex-col items-end px-5 lg:gap-y-2">
             <div class="flex items-center gap-x-3 xs:gap-x-6">
-              <img :src="ordiIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="satsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="BTCsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="ratsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="piinIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img
+                :src="ordiIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="satsIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="BTCsIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="ratsIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="piinIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
               <img
                 :src="ordersIcon"
                 alt=""
-                class="sm:size-8 md:size-12 size-6" />
-              <img :src="coreIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="satsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="coreIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="satsIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
             </div>
             <div class="flex items-center gap-x-3 xs:gap-x-6">
-              <img :src="πIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="kormIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="ligoIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="eorbIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="inscIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="mermcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="moonIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="πtsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+              <img
+                :src="πIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="kormIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="ligoIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="eorbIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="inscIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="mermcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="moonIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="πtsIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
               <div class="w-1"></div>
             </div>
-            <div class="flex items-center gap-x-3 xs:gap-x-6 ml-8">
-              <img :src="AISNIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="WIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="wzrdIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="PUPSIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="ORDGIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="SHIDIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="cowsIcon" alt="" class="sm:size-8 md:size-12 size-6" />
-              <img :src="NODEIcon" alt="" class="sm:size-8 md:size-12 size-6" />
+            <div class="flex items-center gap-x-3 xs:gap-x-6">
+              <img
+                :src="AISNIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="WIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="wzrdIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="PUPSIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="ORDGIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="SHIDIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="cowsIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+              <img
+                :src="NODEIcon"
+                alt=""
+                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
             </div>
           </div>
         </div>
         <div
-          class="col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative overflow-hidden">
-          <h6 class="text-[30px] font-semibold">MetaID PIN</h6>
-          <p class="text-[#A4AFC0] max-w-[428px]">
-            A MetaID PIN is a unique identifier associated with a user's
-            on-chain activities within the MetaID ecosystem
-          </p>
-          <img :src="MetaPInIcon" alt="" class="ml-auto md:w-[80%]" />
+          class="col-span-3 bg-white rounded-xl pl-[30px] pt-[30px] relative overflow-hidden flex lg:flex-row flex-col">
+          <div>
+            <h6 class="inner-title">MetaID PIN</h6>
+            <p class="inner-sub-title max-w-[500px] mt-1.5">
+              A MetaID PIN is a unique identifier associated with a user's
+              on-chain activities within the MetaID ecosystem
+            </p>
+          </div>
+          <img :src="MetaPInIcon" alt="" class="w-[600px] mx-auto" />
           <!-- <div class="absolute bg-[#171AFF] w-[481px] h-[462px] -bottom-40" style="filter: blur(82px);"></div> -->
         </div>
       </div>
     </div>
 
     <div class="pt-[90px] pb-[122px]">
-      <h4 class="text-center font-semibold text-2xl md:text-5xl">
+      <h4 class="text-center title">
         Web3 application market
       </h4>
-      <p class="mt-3 text-[#A4AFC0] text-xl text-center text-balance">
+      <p class="mt-3 sub-title text-center">
         Unleash the full potential of the decentralized world by accessing a
         diverse array of fascinating decentralized applications with just one
         seamless connection.
       </p>
       <div
-        class="bg-white rounded-xl pt-[30px] pl-[30px] mt-[60px] flex items-center lg:flex-row flex-col">
+        class="bg-white rounded-xl pl-[30px] pt-[30px] lg:pt-0 mt-[60px] flex items-center lg:flex-row flex-col">
         <div class="flex flex-col gap-y-[18px] items-start">
           <div class="flex items-center gap-x-2">
             <img :src="BlueFireIcon" alt="" class="w-5" />
@@ -215,10 +287,10 @@ const slogans = [
               NEW
             </div>
           </div>
-          <h4 class="text-center font-semibold text-2xl md:text-5xl">
+          <h4 class="text-center inner-title">
             Seamless connection
           </h4>
-          <p class="text-[#A4AFC0] text-xl">
+          <p class="inner-sub-title">
             Connect through MetaID for a seamless access to a diverse array of
             captivating decentralized applications, exploring the world of Web3
             applications.
@@ -231,4 +303,20 @@ const slogans = [
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.title {
+  @apply font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
+
+.inner-title {
+  @apply font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl;
+}
+
+.sub-title {
+  @apply text-[#A4AFC0] text-sm md:text-base lg:text-lg xl:text-xl text-balance;
+}
+
+.inner-sub-title {
+  @apply text-[#A4AFC0] text-xs md:text-sm lg:text-base xl:text-lg text-balance;
+}
+</style>

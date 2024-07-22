@@ -7,10 +7,7 @@ const show = ref(false);
 
 <template>
   <header
-    class="lg:w-[1046px] w-full border md:px-8 px-4 md:py-6 py-3 rounded-full border-blue-primary"
-    style="
-      /* border-image: linear-gradient(180deg, #99a6ff 0%, #adf4ff 100%) 1; */
-    ">
+    class="w-full lg:w-[1046px] border md:px-8 px-4 md:py-6 py-3 rounded-full border-blue-primary">
     <div class="flex items-center justify-between">
       <router-link to="/" class="flex items-center gap-1 cursor-pointer">
         <img src="/metalet.svg" class="w-[38px]" alt="Metalet" />
