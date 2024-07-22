@@ -16,7 +16,7 @@ const router = VueRouter.createRouter({
     },
     {
       path: "/terms-of-service",
-      component: () => import("./pages/TermsOfService.vue"),
+      component: () => import("./pages/TermsofService.vue"),
     },
     {
       path: "/privacy-policy",
