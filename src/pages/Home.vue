@@ -128,7 +128,7 @@ const slogans = [
       </p>
       <div class="mt-[60px] grid grid-cols-3 xl:gap-8 gap-4">
         <div
-          class="lg:col-span-1 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative flex flex-col sm:flex-row lg:flex-col">
+          class="md:col-span-1 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative flex flex-row md:flex-col">
           <div>
             <h6 class="inner-title">NFT</h6>
             <p class="inner-sub-title mt-1.5">Support Ordinal NFT</p>
@@ -136,10 +136,10 @@ const slogans = [
           <img
             :src="NFTIcon"
             alt=""
-            class="w-[300px] ml-auto mt-auto" />
+            class="w-40 sm:w-64 ml-auto mt-auto" />
         </div>
         <div
-          class="lg:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
+          class="md:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
           <h6 class="inner-title">BRC20 and MRC20</h6>
           <p class="inner-sub-title max-w-[400px] mt-1.5">
             Support for minting BRC20 and the rapid, real-time transfer of MRC20
@@ -151,104 +151,104 @@ const slogans = [
               <img
                 :src="ordiIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="satsIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="BTCsIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="ratsIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="piinIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="ordersIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="coreIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="satsIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
             </div>
             <div class="flex items-center gap-x-3 xs:gap-x-6">
               <img
                 :src="πIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="kormIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="ligoIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="eorbIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="inscIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="mermcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="moonIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="πtsIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <div class="w-1"></div>
             </div>
             <div class="flex items-center gap-x-3 xs:gap-x-6">
               <img
                 :src="AISNIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="WIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="wzrdIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="PUPSIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="ORDGIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="SHIDIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="cowsIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
               <img
                 :src="NODEIcon"
                 alt=""
-                class="sm:size-8 md:size-12 lg:size-14 xl:size-16 size-6" />
+                class="size-6 sm:size-11" />
             </div>
           </div>
         </div>

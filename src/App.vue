@@ -10,7 +10,7 @@ import Header from "@/components/Header.vue";
 
     <router-view></router-view>
 
-    <footer class="w-full py-9 flex items-center justify-between">
+    <footer class="w-full py-9 flex flex-col gap-4 md:flex-row items-center justify-between">
       <div class="flex flex-col items-start">
         <div class="flex items-center gap-x-1">
           <img src="/metalet.svg" class="w-5" alt="Metalet" />

@@ -13,12 +13,10 @@ onBeforeUnmount(() => {
 
 <template>
   <main class="pt-[54px] grow">
-    <div class="flex items-center gap-3">
-      <img
-        :src="ArrowLeftIcon"
-        alt=""
-        @click="$router.replace('/')"
-        class="cursor-pointer" />
+    <div
+      class="flex items-center gap-3 cursor-pointer"
+      @click="$router.replace('/')">
+      <img :src="ArrowLeftIcon" alt="" />
       <h4 class="text-2xl">Terms of Service</h4>
     </div>
     <div class="pt-6 space-y-4">
