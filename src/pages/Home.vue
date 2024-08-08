@@ -113,7 +113,7 @@ const slogans = [
         </a>
         <a
           target="_blank"
-          href="https://metalet.space/down/metalet.apk"
+          href="https://expo.dev/artifacts/eas/naANjt7HMwjQeTzuKJMoCP.apk "
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
           <img class="w-6" :src="AndroidAPKIcon" alt="" />
           <span>Android APK</span>
