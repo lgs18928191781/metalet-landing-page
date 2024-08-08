@@ -45,7 +45,7 @@ const slogans = [
 </script>
 
 <template>
-  <main class="m-w-[1200px]">
+  <main class="m-w-[1200px] overflow-x-hidden">
     <div class="space-y-[30px] pb-[100px]">
       <div
         class="pt-10 flex items-center flex-col xl:flex-row gap-20 xl:gap-0 xl:justify-between">
@@ -97,7 +97,7 @@ const slogans = [
           <img class="w-6" :src="ChromeIcon" alt="" />
           <span>Download</span>
         </a>
-        <a
+        <!-- <a
           target="_blank"
           href="https://apps.apple.com/us/app/metalet/id6450825531?platform=iphone"
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
@@ -110,10 +110,10 @@ const slogans = [
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
           <img class="w-6" :src="GooglePlayIcon" alt="" />
           <span>Google Play</span>
-        </a>
+        </a> -->
         <a
           target="_blank"
-          href="https://expo.dev/artifacts/eas/naANjt7HMwjQeTzuKJMoCP.apk "
+          href="https://metalet.space/down/metalet.apk"
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
           <img class="w-6" :src="AndroidAPKIcon" alt="" />
           <span>Android APK</span>
