@@ -7,7 +7,7 @@ import MetaPInIcon from "@/assets/MetaPin.png";
 import BitcoinIcon from "@/assets/bitcoin.svg";
 import BlueFireIcon from "@/assets/blue-fire.svg";
 import AndroidAPKIcon from "@/assets/Android.png";
-// import AppleStoreIcon from "@/assets/AppleStore.png";
+import AppleStoreIcon from "@/assets/AppleStore.png";
 // import GooglePlayIcon from "@/assets/GooglePlay.png";
 import MetaletMobileIcon from "@/assets/MetaletMobile.png";
 import AISNIcon from "@/assets/brc20/AISN@2x.png";
@@ -97,14 +97,14 @@ const slogans = [
           <img class="w-6" :src="ChromeIcon" alt="" />
           <span>Download</span>
         </a>
-        <!-- <a
+        <a
           target="_blank"
-          href="https://apps.apple.com/us/app/metalet/id6450825531?platform=iphone"
+          href="https://apps.apple.com/us/app/metalet/id6504476687"
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
           <img class="w-6" :src="AppleStoreIcon" alt="" />
           <span>APP Store</span>
         </a>
-        <a
+        <!--<a
           target="_blank"
           href="https://play.google.com/store/search?q=metalet&c=apps"
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
@@ -133,10 +133,7 @@ const slogans = [
             <h6 class="inner-title">NFT</h6>
             <p class="inner-sub-title mt-1.5">Support Ordinal NFT</p>
           </div>
-          <img
-            :src="NFTIcon"
-            alt=""
-            class="w-40 sm:w-64 ml-auto mt-auto" />
+          <img :src="NFTIcon" alt="" class="w-40 sm:w-64 ml-auto mt-auto" />
         </div>
         <div
           class="md:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
@@ -148,107 +145,35 @@ const slogans = [
           <div
             class="mt-5 lg:mt-10 pb-4 flex flex-col items-end px-5 lg:gap-y-2">
             <div class="flex items-center gap-x-3 xs:gap-x-6">
-              <img
-                :src="ordiIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="satsIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="BTCsIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="ratsIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="piinIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="ordersIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="coreIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="satsIcon"
-                alt=""
-                class="size-6 sm:size-11" />
+              <img :src="ordiIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="satsIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="BTCsIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="ratsIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="piinIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="ordersIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="coreIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="satsIcon" alt="" class="size-6 sm:size-11" />
             </div>
             <div class="flex items-center gap-x-3 xs:gap-x-6">
-              <img
-                :src="πIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="kormIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="ligoIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="eorbIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="inscIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="mermcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="moonIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="πtsIcon"
-                alt=""
-                class="size-6 sm:size-11" />
+              <img :src="πIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="kormIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="ligoIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="eorbIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="inscIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="mermcon" alt="" class="size-6 sm:size-11" />
+              <img :src="moonIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="πtsIcon" alt="" class="size-6 sm:size-11" />
               <div class="w-1"></div>
             </div>
             <div class="flex items-center gap-x-3 xs:gap-x-6">
-              <img
-                :src="AISNIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="WIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="wzrdIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="PUPSIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="ORDGIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="SHIDIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="cowsIcon"
-                alt=""
-                class="size-6 sm:size-11" />
-              <img
-                :src="NODEIcon"
-                alt=""
-                class="size-6 sm:size-11" />
+              <img :src="AISNIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="WIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="wzrdIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="PUPSIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="ORDGIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="SHIDIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="cowsIcon" alt="" class="size-6 sm:size-11" />
+              <img :src="NODEIcon" alt="" class="size-6 sm:size-11" />
             </div>
           </div>
         </div>
@@ -268,9 +193,7 @@ const slogans = [
     </div>
 
     <div class="pt-[90px] pb-[122px]">
-      <h4 class="text-center title">
-        Web3 application market
-      </h4>
+      <h4 class="text-center title">Web3 application market</h4>
       <p class="mt-3 sub-title text-center">
         Unleash the full potential of the decentralized world by accessing a
         diverse array of fascinating decentralized applications with just one
@@ -287,9 +210,7 @@ const slogans = [
               NEW
             </div>
           </div>
-          <h4 class="text-center inner-title">
-            Seamless connection
-          </h4>
+          <h4 class="text-center inner-title">Seamless connection</h4>
           <p class="inner-sub-title">
             Connect through MetaID for a seamless access to a diverse array of
             captivating decentralized applications, exploring the world of Web3
