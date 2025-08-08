@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NFTIcon from "@/assets/NFT.png";
+import NFTIcon from "@/assets/nft-section.png";
 import CheckIcon from "@/assets/Check.svg";
 import MobileIcon from "@/assets/Mobile.png";
 import ChromeIcon from "@/assets/Chrome.png";
@@ -70,7 +70,7 @@ const slogans = [
             <div
               :key="index"
               v-for="(slogan, index) in slogans"
-              class="flex items-start gap-x-[20.61px]">
+              class="flex items-start gap-x-[20.61px] text-[#64686F]">
               <div
                 class="bg-[#EAF2FA] w-[26px] aspect-square rounded-full flex items-center justify-center shrink-0">
                 <img :src="CheckIcon" alt="" class="w-2.5" />
@@ -96,21 +96,31 @@ const slogans = [
       </div>
 
       <!-- download button -->
-      <div
-        class="grid lg:grid-cols-4 grid-cols-2 gap-4 sm:gap-8 items-center w-full">
+  <div class="w-full  flex items-center justify-center">
+        <div
+        class="grid mt-10 w-full md:w-3/5 lg:grid-cols-3 grid-cols-2  gap-4 sm:gap-8 items-center justify-center  ">
         <a
           target="_blank"
           href="https://chromewebstore.google.com/detail/metalet/lbjapbcmmceacocpimbpbidpgmlmoaao"
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
-          <img class="w-6" :src="ChromeIcon" alt="" />
-          <span>Download</span>
+        <div class="flex flex-col items-center">
+            <div class="flex flex-row">
+             
+                <span class="mr-3 font-medium ">Chrome extension</span>
+                 <img class="w-6" :src="ChromeIcon" alt="" />
+          </div>
+          <div>
+            <span class="text-[#909399]">(For Web apps)</span>
+          </div>
+        </div>
         </a>
         <a
           target="_blank"
           href="https://apps.apple.com/us/app/metalet/id6504476687"
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
+          
+          <span class="font-medium">APP Store</span>
           <img class="w-6" :src="AppleStoreIcon" alt="" />
-          <span>APP Store</span>
         </a>
         <!--<a
           target="_blank"
@@ -123,25 +133,28 @@ const slogans = [
           target="_blank"
           href="https://metalet.space/down/metalet.apk"
           class="bg-white h-15 rounded-[60px] flex items-center justify-center gap-3">
-          <img class="w-6" :src="AndroidAPKIcon" alt="" />
-          <span>Android APK</span>
+         
+          <span class="font-medium">Android APK</span>
+           <img class="w-6" :src="AndroidAPKIcon" alt="" />
         </a>
       </div>
+  </div>
     </div>
 
     <div class="pt-[60px]">
-      <h4 class="title text-center">Ease To Use</h4>
-      <p class="mt-4 sub-title text-center">
+      <h4 class="title text-center">Easy To Use</h4>
+      <p class="mt-4 sub-title font-medium text-center">
         Redefine Bitcoin Ecosystem UX, Beyond Anticipation
       </p>
       <div class="mt-[60px] grid grid-cols-3 xl:gap-8 gap-4">
         <div
           class="md:col-span-1 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative flex flex-row md:flex-col">
-          <div>
+          <div class="re">
             <h6 class="inner-title">NFT</h6>
             <p class="inner-sub-title mt-1.5">Supports MRC-721, Ordinals  and Metacontract NFT</p>
+             
           </div>
-          <img :src="NFTIcon" alt="" class="w-40 sm:w-64 ml-auto mt-auto" />
+         <img :src="NFTIcon" alt="" class="w-60 sm:w-64 ml-auto mt-auto" />
         </div>
         <div
           class="md:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
@@ -150,8 +163,8 @@ const slogans = [
             Supports secure storage of MRC20, MetaContract, and BRC20 token assets
           </p>
           <div
-            class="mt-5 lg:mt-10 pb-4 flex flex-col items-center px-5 lg:gap-y-2">
-            <div class="flex items-center gap-x-3 xs:gap-x-6">
+            class="mt-5 lg:mt-10 pb-4 flex flex-col items-center px-0 lg:gap-y-4">
+            <div class="flex items-center justify-around w-11/12 gap-x-3 xs:gap-x-6">
               <img :src="ordiIcon" alt="" class="size-6 sm:size-11" />
               <img :src="satsIcon" alt="" class="size-6 sm:size-11" />
               <img :src="BTCsIcon" alt="" class="size-6 sm:size-11" />
@@ -161,7 +174,7 @@ const slogans = [
               <img :src="coreIcon" alt="" class="size-6 sm:size-11" />
               <img :src="satsIcon" alt="" class="size-6 sm:size-11" />
             </div>
-            <div class="flex items-center gap-x-3 xs:gap-x-6">
+            <div class="flex items-center justify-around w-11/12 gap-x-3  xs:gap-x-6">
               <img :src="πIcon" alt="" class="size-6 sm:size-11" />
               <img :src="kormIcon" alt="" class="size-6 sm:size-11" />
               <img :src="ligoIcon" alt="" class="size-6 sm:size-11" />
@@ -172,7 +185,7 @@ const slogans = [
               <img :src="πtsIcon" alt="" class="size-6 sm:size-11" />
               <div class="w-1"></div>
             </div>
-            <div class="flex items-center gap-x-3 xs:gap-x-6">
+            <div class="flex items-center justify-around w-11/12 gap-x-3 xs:gap-x-6">
               <img :src="AISNIcon" alt="" class="size-6 sm:size-11" />
               <img :src="WIcon" alt="" class="size-6 sm:size-11" />
               <img :src="wzrdIcon" alt="" class="size-6 sm:size-11" />
@@ -260,4 +273,5 @@ const slogans = [
   background-repeat: no-repeat;
   
 }
+
 </style>
