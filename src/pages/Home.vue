@@ -33,14 +33,22 @@ import satsIcon from "@/assets/brc20/sats@2x.png";
 import wzrdIcon from "@/assets/brc20/wzrd@2x.png";
 import πIcon from "@/assets/brc20/π@2x.png";
 import πtsIcon from "@/assets/brc20/πts@2x.png";
+// import BgImg from '@/assets/bg-img-3@2x.png';
+ 
+
+
+
+
+
+
+
 
 const slogans = [
-  "Lightweight and Fast",
-  "Supports Android, iOS and Chrome",
-  "Supports BTC and Bitcoin sidechain MVC",
-  "Supports Ordinals, BRC20, Runes, MRC20, MVC20, MetaID PIN, MetaID and other protocols",
-  "Supports Ordinal NFT",
-  "Support MetaID to connect with DApps",
+  "Opensourced, Lightning - Fast",
+  "Trusted by 200K+ MetaID Ecosystem Users",
+  "Bitcoin & Bitcoin Sidechain MVC Native Support",
+  "Full Support for MetaID SDK, PINs, MRC20, MRC721, BRC20、MetaContract,etc. ",
+  "MetaID - DApps Superbridge: Seamless Web3 Interaction Gateway"
 ];
 </script>
 
@@ -51,11 +59,11 @@ const slogans = [
         class="pt-10 flex items-center flex-col xl:flex-row gap-20 xl:gap-0 xl:justify-between">
         <div class="pt-[1.5px] flex flex-col items-start">
           <h1 class="text-4xl lg:text-[50px] lg:leading-[60px] font-bold">
-            <span>One Wallet for All</span>
+            <span>MetaID-Powered Wallet for</span>
             <span class="flex items-center">
               <img class="lg:w-12 w-9" :src="BitcoinIcon" alt="" />
               <span class="text-[#F7931A]">&nbsp;Bitcoin</span>
-              <span>&nbsp;Ecosystems</span>
+              <span>&nbsp;Web3 Apps</span>
             </span>
           </h1>
           <div class="w-full space-y-5 mt-[34px] hidden xl:block">
@@ -124,26 +132,25 @@ const slogans = [
     <div class="pt-[60px]">
       <h4 class="title text-center">Ease To Use</h4>
       <p class="mt-4 sub-title text-center">
-        The Bitcoin Ecosystem wallet you've been anticipating.
+        Redefine Bitcoin Ecosystem UX, Beyond Anticipation
       </p>
       <div class="mt-[60px] grid grid-cols-3 xl:gap-8 gap-4">
         <div
           class="md:col-span-1 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px] relative flex flex-row md:flex-col">
           <div>
             <h6 class="inner-title">NFT</h6>
-            <p class="inner-sub-title mt-1.5">Support Ordinal NFT</p>
+            <p class="inner-sub-title mt-1.5">Supports MRC-721, Ordinals  and Metacontract NFT</p>
           </div>
           <img :src="NFTIcon" alt="" class="w-40 sm:w-64 ml-auto mt-auto" />
         </div>
         <div
           class="md:col-span-2 col-span-3 bg-white rounded-xl pt-[30px] pl-[30px]">
-          <h6 class="inner-title">BRC20 and MRC20</h6>
+          <h6 class="inner-title">MRC20 and BRC20</h6>
           <p class="inner-sub-title max-w-[400px] mt-1.5">
-            Support for minting BRC20 and the rapid, real-time transfer of MRC20
-            tokens.
+            Supports secure storage of MRC20, MetaContract, and BRC20 token assets
           </p>
           <div
-            class="mt-5 lg:mt-10 pb-4 flex flex-col items-end px-5 lg:gap-y-2">
+            class="mt-5 lg:mt-10 pb-4 flex flex-col items-center px-5 lg:gap-y-2">
             <div class="flex items-center gap-x-3 xs:gap-x-6">
               <img :src="ordiIcon" alt="" class="size-6 sm:size-11" />
               <img :src="satsIcon" alt="" class="size-6 sm:size-11" />
@@ -178,12 +185,11 @@ const slogans = [
           </div>
         </div>
         <div
-          class="col-span-3 bg-white rounded-xl pl-[30px] pt-[30px] relative overflow-hidden flex lg:flex-row flex-col">
+          class="col-span-3 section2 bg-white rounded-xl pl-[30px] pt-[30px] relative overflow-hidden flex lg:flex-row flex-col">
           <div>
-            <h6 class="inner-title">MetaID PIN</h6>
+            <h6 class="inner-title">MetaID Web3 Apps</h6>
             <p class="inner-sub-title max-w-[500px] mt-1.5">
-              A MetaID PIN is a unique identifier associated with a user's
-              on-chain activities within the MetaID ecosystem
+             The first to support MetaID SDK, with all MetaID functions available. It stores assets related to the MetaID protocol and connects to a vast number of MetaID applications.
             </p>
           </div>
           <img :src="MetaPInIcon" alt="" class="w-[600px] mx-auto" />
@@ -200,7 +206,7 @@ const slogans = [
         seamless connection.
       </p>
       <div
-        class="bg-white rounded-xl pl-[30px] pt-[30px] lg:pt-0 mt-[60px] flex items-center lg:flex-row flex-col">
+        class="bg-white section3 rounded-xl pl-[30px] pt-[30px] lg:pt-0 mt-[60px] flex items-center lg:flex-row flex-col">
         <div class="flex flex-col gap-y-[18px] items-start">
           <div class="flex items-center gap-x-2">
             <img :src="BlueFireIcon" alt="" class="w-5" />
@@ -239,5 +245,19 @@ const slogans = [
 
 .inner-sub-title {
   @apply text-[#A4AFC0] text-xs md:text-sm lg:text-base xl:text-lg text-balance;
+}
+
+.section2{
+  background-image:url('../assets/bg-img-3@2x.png') ;
+    background-position: center;
+  background-size: cover;    
+  background-repeat: no-repeat;
+}
+.section3{
+   background-image:url('../assets/bg-img-2@2x.png') ;
+    background-position: center;
+  background-size: cover;    
+  background-repeat: no-repeat;
+  
 }
 </style>

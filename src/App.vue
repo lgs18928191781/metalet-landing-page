@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import XIcon from "@/assets/x.svg";
 import Header from "@/components/Header.vue";
+import GithubIcon from '@/assets/githubIcon.png'
 </script>
 
 <template>
@@ -30,16 +31,21 @@ import Header from "@/components/Header.vue";
           </RouterLink>
         </p>
       </div>
-      <div class="flex items-center gap-x-4">
+      <div class="flex items-center ">
         <RouterLink
           to="/feedback"
-          class="hover:underline hover:text-blue-primary">
+          class="mr-[40px] cursor-pointer hover:underline hover:text-blue-primary">
           Feedback
         </RouterLink>
         <span class="text-[#E0E3E8]">|</span>
-        <a href="https://x.com/metaletofficial" target="_blank">
+        <div class="flex  items-center justify-center">
+           <a class="ml-[40px] cursor-pointer" href="https://x.com/metaletofficial" target="_blank">
           <img :src="XIcon" alt="X" />
         </a>
+         <a class="ml-[40px] cursor-pointer" href="https://github.com/mvc-labs/metalet-extension" target="_blank">
+          <img :src="GithubIcon" alt="Github" />
+        </a>
+        </div>
       </div>
     </footer>
   </div>
