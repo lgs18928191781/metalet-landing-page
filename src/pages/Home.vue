@@ -212,7 +212,7 @@ const slogans = [
     </div>
 
     <div class="pt-[90px] pb-[122px]">
-      <h4 class="text-center title">Web3 application market</h4>
+      <h4 class="text-center title">Web3 Application Market</h4>
       <p class="mt-3 sub-title text-center">
         Unleash the full potential of the decentralized world by accessing a
         diverse array of fascinating decentralized applications with just one
