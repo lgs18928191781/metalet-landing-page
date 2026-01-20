@@ -187,7 +187,7 @@ const fetchPinList = async (reset = false) => {
     const result: pinRes = await getPinListByAddreeWithBtc(params)
     
     if (result && result.list && result.list.length > 0) {
-      // 过滤掉 path 为 /protocols/* 或 /file 的 pinitem
+      // 过滤掉 path 为 /protocols/* 或 /file 的 pinitem，以及 outputValue 大于 546 的项目
       const filteredList = result.list.filter(item => {
         const path = item.path || ''
         // 过滤掉 /protocols/* 开头的路径
@@ -205,6 +205,10 @@ const fetchPinList = async (reset = false) => {
         }
         // 过滤掉 /file 路径
         if (path === '/follow') {
+          return false
+        }
+        // 过滤掉 outputValue 大于 546 的项目
+        if (item.outputValue > 546) {
           return false
         }
         return true
@@ -278,6 +282,7 @@ const toggleSelect = async (item: pinInfo) => {
       // 即使获取 rawTx 失败，也添加 utxo（rawTx 为可选）
       const utxo: SelectedUtxo = {
         txId: item.id.slice(0, -2),
+        rawTx:'',
         satoshis: item.outputValue,
         confirmed: true,
         outputIndex: item.txIndex
