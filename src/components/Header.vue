@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import ManagerIcon from "@/assets/Manager.svg";
-
+import LoginUserOperate from '@/components/LoginUserOperate/LoginUserOperate.vue'
 const show = ref(false);
 </script>
 
@@ -26,6 +26,11 @@ const show = ref(false);
           class="hover:text-blue-primary hover:opacity-70">
           Documentation
         </a>
+        <RouterLink
+          to="/pin/management"
+          class="hover:text-blue-primary hover:opacity-70">
+          PinManagement
+        </RouterLink>
         <a
           target="_blank"
           href="https://chromewebstore.google.com/detail/metalet/lbjapbcmmceacocpimbpbidpgmlmoaao"
@@ -53,6 +58,12 @@ const show = ref(false);
         class="w-full h-14 leading-14 block opacity-80 hover:font-bold active:opacity-100">
         Documentation
       </a>
+      <RouterLink
+        to="/pin/management"
+        class="w-full h-14 leading-14 block opacity-80 hover:font-bold active:opacity-100"
+        @click="show = false">
+        PinManagement
+      </RouterLink>
       <a
         target="_blank"
         href="https://chromewebstore.google.com/detail/metalet/lbjapbcmmceacocpimbpbidpgmlmoaao"
@@ -60,5 +71,18 @@ const show = ref(false);
         Download
       </a>
     </div>
+
+     <!-- <div class="user-section flex items-center">
+        <LoginUserOperate />
+      </div> -->
+
   </header>
 </template>
+
+<style lang="scss" scoped>
+.user-section {
+  flex-shrink: 0;
+  
+ 
+}
+</style>

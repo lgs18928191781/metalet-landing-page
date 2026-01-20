@@ -1,17 +1,33 @@
 <script setup lang="ts">
+import { computed,onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import XIcon from "@/assets/x.svg";
+import { getUtxoRawTx } from "@/api/metalet-v3"; 
 import Header from "@/components/Header.vue";
 import GithubIcon from '@/assets/githubIcon.png'
+import ConnectWalletModalVue from '@/components/ConnectWalletModal/ConnectWalletModal.vue'
+import { useUserStore } from '@/stores/user'
+
+const route = useRoute()
+const userStore = useUserStore()
+const isPinManagementPage = computed(() => route.path === '/pin/management')
+
+ 
+onMounted(()=>{
+ 
+  //getUtxoRawTx({txId:'308647cbbf60d5c8d4ce4b036b9cc0beb56ed71257e65b2eb13e946d57b9bbfa'})
+})
+
 </script>
 
 <template>
   <div
     class="w-full min-h-screen relative pt-6 px-5 flex flex-col items-center">
-    <Header />
+    <Header v-if="!isPinManagementPage" />
 
     <router-view></router-view>
 
-    <footer class="w-full py-9 flex flex-col gap-4 md:flex-row items-center justify-between">
+    <footer class="w-full  py-9 flex flex-col gap-4 md:flex-row items-center justify-between">
       <div class="flex flex-col items-start">
         <div class="flex items-center gap-x-1">
           <img src="/metalet.svg" class="w-5" alt="Metalet" />
@@ -48,6 +64,8 @@ import GithubIcon from '@/assets/githubIcon.png'
         </div>
       </div>
     </footer>
+    <!-- 模态框组件 -->
+    <ConnectWalletModalVue />
   </div>
 </template>
 
