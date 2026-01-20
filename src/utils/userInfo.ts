@@ -1,6 +1,6 @@
 import { TxComposer, mvc } from 'meta-contract'
 import { sleep } from './util'
-import { isNil } from 'lodash'
+import isNil from 'lodash/isNil'
 import axios from 'axios'
 import { useUtxosStore } from '@/stores/useabel-utxo'
 import { getUseableUtxo } from '@/wallet-adapters/metalet'

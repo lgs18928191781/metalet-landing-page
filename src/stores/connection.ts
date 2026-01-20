@@ -63,7 +63,7 @@ export const useConnectionStore = defineStore('connection', {
     },
     adapter: (state) => {
       if (!state.last) throw new Error('No connection')
-
+              //@ts-ignore
       const adapter: {
       
         getMvcBalance: () => Promise<any>

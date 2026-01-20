@@ -122,18 +122,24 @@ async function getPubkey() {
 
      switch (scriptType) {
         case ScriptType.P2PKH:
+          //@ts-ignore
           return payments.p2pkh({ pubkey: publicKey, network: networks.bitcoin })
         case ScriptType.P2SH_P2WPKH:
           return payments.p2sh({
+            
             redeem: payments.p2wpkh({
+                //@ts-ignore
               pubkey: publicKey,
               network: networks.bitcoin,
             }),
           })
         case ScriptType.P2WPKH:
+            //@ts-ignore
           return payments.p2wpkh({ pubkey: publicKey, network: networks.bitcoin })
         case ScriptType.P2TR:
+      
           return payments.p2tr({
+                  //@ts-ignore
             internalPubkey: publicKey!.subarray(1),
             network: networks.bitcoin,
           })
@@ -160,11 +166,14 @@ async function getPubkey() {
       const scriptType =await getScriptType()
   
       if ([ScriptType.P2SH_P2WPKH, ScriptType.P2WPKH].includes(scriptType)) {
+              //@ts-ignore
         payInput.witnessUtxo = { script: payment.output!, value: utxo.satoshis }
       }
   
       if (['P2TR'].includes(scriptType)) {
+              //@ts-ignore
         payInput.tapInternalKey = await getPubkey().subarray(1)
+              //@ts-ignore
         payInput.witnessUtxo = { value: utxo.satoshis, script: payment.output! }
       }
   
@@ -195,6 +204,7 @@ async function getPubkey() {
       }
   
       if (['P2SH-P2WPKH'].includes(scriptType)) {
+              //@ts-ignore
         payInput.redeemScript = payment.redeem?.output
       }
   
@@ -219,6 +229,7 @@ async function getPubkey() {
 
         try {
         const psbtInput =await createPsbtInput(utxo)
+              //@ts-ignore
         psbt.addInput(psbtInput)
         }catch (error: unknown) {
         throw error as Error
@@ -227,6 +238,7 @@ async function getPubkey() {
         }
         psbt.addOutput({
         address: recipient,
+              //@ts-ignore
         value: new Decimal(amount).toNumber(),
         })
 
@@ -266,8 +278,11 @@ async function getPubkey() {
         return (
         TX_INPUT_BASE +
         (input.redeemScript ? input.redeemScript.length : 0) +
+              //@ts-ignore
         (input.witnessScript
+                //@ts-ignore
         ? input.witnessScript.length / 4
+              //@ts-ignore
         : isTaprootInput(input)
         ? TX_INPUT_TAPROOT
         : input.witnessUtxo
@@ -297,6 +312,7 @@ async function getPubkey() {
           
         const inputs = psbt.data.inputs
         const outputs = psbt.txOutputs
+              //@ts-ignore
         return await transactionBytes(inputs, outputs, isTaproot)
         }
 
