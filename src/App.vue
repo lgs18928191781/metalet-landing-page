@@ -2,7 +2,7 @@
 import { computed,onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import XIcon from "@/assets/x.svg";
-import { getUtxoRawTx } from "@/api/metalet-v3"; 
+ 
 import Header from "@/components/Header.vue";
 import GithubIcon from '@/assets/githubIcon.png'
 import ConnectWalletModalVue from '@/components/ConnectWalletModal/ConnectWalletModal.vue'
@@ -14,8 +14,7 @@ const isPinManagementPage = computed(() => route.path === '/pin/management')
 
  
 onMounted(()=>{
- 
-  //getUtxoRawTx({txId:'308647cbbf60d5c8d4ce4b036b9cc0beb56ed71257e65b2eb13e946d57b9bbfa'})
+
 })
 
 </script>

@@ -12,7 +12,7 @@ Psbt
 import { Buffer } from 'buffer'
 import { useBtcJsStore } from '@/stores/btcjs'
 import { useChainStore } from '@/stores/chain'
-import {broadcast} from '@/api/metalet-v3'
+import {broadcast,getUtxoRawTx} from '@/api/metalet-v3'
 
 const TX_EMPTY_SIZE = 4 + 1 + 1 + 4
 const TX_INPUT_BASE = 32 + 4 + 1 + 4 // 41
@@ -179,9 +179,13 @@ async function getPubkey() {
   
       if (['P2PKH'].includes(scriptType)) {
         if (!utxo?.rawTx) {
-          throw new Error(
+          const rawTxResult = await getUtxoRawTx({ txId:utxo.txId })
+          utxo.rawTx=rawTxResult.rawTx
+          if(!utxo?.rawTx){
+             throw new Error(
             `Legacy transactions require passing rawTx to the UTXO.The UTXO with id ${utxo.txId} is missing rawTx.`,
           )
+          }
         }
         const tx = Transaction.fromHex(utxo.rawTx)
         

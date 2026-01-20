@@ -42,7 +42,7 @@ const btcPrice = ref<number>(0)
 let pricePollingTimer: ReturnType<typeof setInterval> | null = null
 
 // 过滤和排序条件
-const filterType = ref<'all' | 'lt8' | 'gte8' | 'sortAsc' | 'sortDesc'>('lt8') // 默认使用 Lv < 8
+const filterType = ref<'all' | 'lt8' | 'lt7' | 'lt6' | 'gte8' | 'sortAsc' | 'sortDesc'>('lt8') // 默认使用 Lv < 8
 
 // 弹窗状态
 const showWarningDialog = ref(false) // 警告弹窗（包含高等级 PINs）
@@ -84,6 +84,16 @@ const filteredPinList = computed(() => {
     result = pinList.value.filter(item => {
       if (item.popLv === null || item.popLv === undefined) return false
       return item.popLv < 8
+    })
+  } else if (filterType.value === 'lt7') {
+    result = pinList.value.filter(item => {
+      if (item.popLv === null || item.popLv === undefined) return false
+      return item.popLv < 7
+    })
+  } else if (filterType.value === 'lt6') {
+    result = pinList.value.filter(item => {
+      if (item.popLv === null || item.popLv === undefined) return false
+      return item.popLv < 6
     })
   } else if (filterType.value === 'gte8') {
     result = pinList.value.filter(item => {
@@ -252,11 +262,11 @@ const toggleSelect = async (item: pinInfo) => {
     try {
       // 获取 rawTx
       const txId = item.id.slice(0, -2)
-      const rawTxResult = await getUtxoRawTx({ txId })
+      //const rawTxResult = await getUtxoRawTx({ txId })
       
       const utxo: SelectedUtxo = {
         txId: txId,
-        rawTx: rawTxResult.rawTx,
+        rawTx:'', //rawTxResult.rawTx,
         satoshis: item.outputValue,
         confirmed: true,
         outputIndex: item.txIndex
@@ -369,7 +379,7 @@ async function connectMetalet() {
 
   try {
     const connection = await connectionStore.connect('metalet').catch((err) => {
-         toast.error('最大允许溶解100个PIN,请检查后重试')(err.message)
+         toast.error('最大允许溶化100个PIN,请检查后重试')(err.message)
    
   })
     if (connection?.status === 'connected') {
@@ -646,7 +656,7 @@ const hasHighLevelPins = computed(() => {
 // 处理 Melt PINs 按钮点击
 const handleMeltPins = async () => {
   if (selectedCount.value < 3 || selectedCount.value > 100) {
-     toast.warning('最大允许溶解100个PIN,请检查后重试')
+     toast.warning('最大允许溶化100个PIN,请检查后重试')
     return
   }
 
@@ -728,7 +738,7 @@ const confirmMelt = async () => {
       refreshData()
     }
   } catch (error) {
-    console.error('溶解操作失败:', error)
+    console.error('溶化操作失败:', error)
     // TODO: 显示错误提示
   } finally {
     loadingMelt.value = false
@@ -792,7 +802,7 @@ onUnmounted(() => {
           <!-- <a href="#" class="text-blue-500 underline ml-1 hover:text-blue-600">FAQ</a> -->
         </p>
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
-          The list only displays PINs other than those from <span class="highlight-gradient">MRC20</span>, <span class="highlight-gradient">MRC721</span>, and <span class="highlight-gradient">Info</span> nodes, to avoid accidentally dissolving critical PINs.
+          The list only displays PINs other than those from <span class="highlight-gradient">MRC20</span>, <span class="highlight-gradient">MRC721</span>, and <span class="highlight-gradient">Info</span> nodes, to avoid accidentally melting critical PINs.
         </p>
       </div>
 
@@ -867,7 +877,11 @@ onUnmounted(() => {
               class="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             >
               <option value="all">All PINs</option>
+               <option value="lt6">popLv &lt; 6</option>
+                <option value="lt7">popLv &lt; 7</option>
+             
               <option value="lt8">popLv &lt; 8</option>
+   
               <option value="gte8">popLv &gt;= 8</option>
               <option value="sortAsc">popLv 从低到高</option>
               <option value="sortDesc">popLv 从高到低</option>
@@ -1013,7 +1027,7 @@ onUnmounted(() => {
         <div class="text-sm text-gray-600 dark:text-gray-400 melt-intro">
           <div class="font-bold text-base">Selected: {{ selectedCount }} PINs | {{ selectedBTC }} BTC (${{ selectedUSD.toFixed(2) }})</div>
           <div class="text-xs text-orange-600 dark:text-orange-400 mt-1">
-            仅支持3个以上或100个以下PIN进行溶解操作，请务必谨慎检查要溶解的选项中是否包含Pin等级大于等于8
+            仅支持3个以上或100个以下PIN进行溶化操作，请务必谨慎检查要溶化的选项中是否包含Pin等级大于等于8
           </div>
         </div>
         <div class="flex items-center gap-3 btn-op-group">
@@ -1045,7 +1059,7 @@ onUnmounted(() => {
           警告
         </h3>
         <p class="text-gray-700 dark:text-gray-300 mb-6">
-          你选中的PINs包含等级大于等于8的Pin，你确认继续进行溶解操作？
+          你选中的PINs包含等级大于等于8的Pin，你确认继续进行溶化操作？
         </p>
         <div class="flex justify-end gap-3">
           <button
@@ -1083,7 +1097,7 @@ onUnmounted(() => {
         </button>
         <div class="mb-6 pr-8">
           <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            确认溶解操作
+            确认溶化操作
           </h3>
           <p class="text-sm text-gray-500 dark:text-gray-400">
             请仔细核对以下信息，确认无误后点击确认按钮
@@ -1163,7 +1177,7 @@ onUnmounted(() => {
             :disabled="loadingMelt"
             class="px-6 py-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium shadow-md hover:shadow-lg"
           >
-            {{ loadingMelt ? '处理中...' : '确认溶解' }}
+            {{ loadingMelt ? '处理中...' : '确认溶化' }}
           </button>
         </div>
       </div>
@@ -1189,10 +1203,10 @@ onUnmounted(() => {
         <div class="text-center">
           <div class="mb-4 text-6xl">🎉</div>
           <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            溶解成功！
+            溶化成功！
           </h3>
           <p class="text-gray-600 dark:text-gray-400 mb-6">
-            您的PINs已成功溶解，交易已提交到区块链网络
+            您的PINs已成功溶化，交易已提交到区块链网络
           </p>
           
           <div class="mb-6 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
