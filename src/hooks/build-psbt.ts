@@ -151,8 +151,13 @@ async function getPubkey() {
    }
 
   async function getScriptType(){
-    const res=await window.metaidwallet?.btc.getAddressType()
+    try {
+      const res=await window.metaidwallet?.btc.getAddressType()
     return res!.addressType as ScriptType
+    } catch (error) {
+      toast.error(error)
+      throw new Error(error)
+    }
    }
 
  
