@@ -1243,9 +1243,9 @@ onUnmounted(() => {
 
 <style scoped>
 .pin-management-page {
-  padding-bottom: 50px; /* 为底部操作栏和 footer 留出空间 */
+  padding-bottom: 200px; /* 为底部操作栏和 footer 留出足够空间 */
   background-color: #F5F7F9;
-  min-height: calc(100vh - 50px); /* 确保内容区域有足够高度，但为 footer 留出空间 */
+  /* 移除 min-height，让内容自然流动，footer 可以正常显示 */
 }
 
 .container {
