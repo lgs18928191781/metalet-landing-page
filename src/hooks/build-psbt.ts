@@ -101,7 +101,7 @@ export const useBuildPsbt = createGlobalState(() => {
 
 async function getPubkey() {
    const pukStr= await window.metaidwallet?.btc.getPublicKey()
-   toast.info(pukStr)
+ 
    let pubkeyBuffer: Buffer
     if (typeof pukStr === 'string') {
     // 如果是十六进制字符串，转换为 Buffer

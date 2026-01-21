@@ -677,6 +677,11 @@ const handleMeltPins = async () => {
 
 // 显示确认弹窗
 const showMeltConfirmDialog = async () => {
+  if(rootStore.isWebView){
+    return toast.error('暂不支持App端进行该操作,请前往网页端进行PINs熔化操作')
+  }
+
+
   try {
     loadingMelt.value = true
     const result = await estimatedTxFee({
