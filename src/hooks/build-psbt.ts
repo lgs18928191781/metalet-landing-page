@@ -14,6 +14,7 @@ import { useBtcJsStore } from '@/stores/btcjs'
 import { useChainStore } from '@/stores/chain'
 import {broadcast,getUtxoRawTx} from '@/api/metalet-v3'
 import toast from '@/utils/toast'
+import { useRootStore } from '@/stores/root'
 
 const TX_EMPTY_SIZE = 4 + 1 + 1 + 4
 const TX_INPUT_BASE = 32 + 4 + 1 + 4 // 41
@@ -355,6 +356,7 @@ async function getPubkey() {
   })=>{
     const btcjs=useBtcJsStore().get!
     const chainStore=useChainStore()
+    const rootStore=useRootStore()
     const {recipient}=params.buildPsbtParams
     let total = getTotalSatoshi(params.utxos)
     let psbt =await buildPsbt(params.buildPsbtParams,  params.utxos)
@@ -372,6 +374,10 @@ async function getPubkey() {
      const psbtSignerRes= await window.metaidwallet?.btc.signPsbt({psbtHex:psbt.toHex(),options:{autoFinalized:true}})
      toast.info(psbtSignerRes)
      const payPsbt = btcjs.Psbt.fromHex(psbtSignerRes,{network:networks.bitcoin})
+     if(rootStore.isWebView){
+      payPsbt.finalizeAllInputs()
+     }
+     
      const payTxRaw = payPsbt.extractTransaction().toHex()
      const tx=await broadcast(payTxRaw,'btc')
      
