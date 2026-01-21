@@ -370,7 +370,7 @@ async function getPubkey() {
       )
   
      const psbtSignerRes= await window.metaidwallet?.btc.signPsbt({psbtHex:psbt.toHex(),options:{autoFinalized:true}})
-     
+     toast.info(psbtSignerRes)
      const payPsbt = btcjs.Psbt.fromHex(psbtSignerRes,{network:networks.bitcoin})
      const payTxRaw = payPsbt.extractTransaction().toHex()
      const tx=await broadcast(payTxRaw,'btc')
