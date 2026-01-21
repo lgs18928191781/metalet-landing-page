@@ -697,7 +697,9 @@ const showMeltConfirmDialog = async () => {
     }
     showConfirmDialog.value = true
   } catch (error) {
-    console.error('获取预估费用失败:', error)
+    
+    toast.error(`获取预估费用失败:${error as any}` )
+  
     // TODO: 显示错误提示
   } finally {
     loadingMelt.value = false
@@ -743,6 +745,7 @@ const confirmMelt = async () => {
       refreshData()
     }
   } catch (error) {
+    toast.error(`'熔化操作失败:'${error as any}`)
     console.error('熔化操作失败:', error)
     // TODO: 显示错误提示
   } finally {
