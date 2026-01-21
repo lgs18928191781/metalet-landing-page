@@ -119,6 +119,7 @@ async function getPubkey() {
    async function getPayment(){
     
     const scriptType=await getScriptType()
+     toast.info(scriptType)
     const publicKey =await getPubkey()
 
      switch (scriptType) {
@@ -165,7 +166,7 @@ async function getPubkey() {
   
       const payment =await getPayment()
       const scriptType =await getScriptType()
-      toast.info(scriptType)
+     
       if ([ScriptType.P2SH_P2WPKH, ScriptType.P2WPKH].includes(scriptType)) {
               //@ts-ignore
         payInput.witnessUtxo = { script: payment.output!, value: utxo.satoshis }
