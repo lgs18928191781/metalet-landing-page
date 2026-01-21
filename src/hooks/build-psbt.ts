@@ -369,7 +369,7 @@ async function getPubkey() {
         params.utxos,
       )
   
-     const psbtSignerRes= await window.metaidwallet?.btc.signPsbt({psbtHex:psbt.toHex()})
+     const psbtSignerRes= await window.metaidwallet?.btc.signPsbt({psbtHex:psbt.toHex(),options:{autoFinalized:true}})
      
      const payPsbt = btcjs.Psbt.fromHex(psbtSignerRes,{network:networks.bitcoin})
      const payTxRaw = payPsbt.extractTransaction().toHex()
