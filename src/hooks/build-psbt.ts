@@ -13,6 +13,7 @@ import { Buffer } from 'buffer'
 import { useBtcJsStore } from '@/stores/btcjs'
 import { useChainStore } from '@/stores/chain'
 import {broadcast,getUtxoRawTx} from '@/api/metalet-v3'
+import toast from '@/utils/toast'
 
 const TX_EMPTY_SIZE = 4 + 1 + 1 + 4
 const TX_INPUT_BASE = 32 + 4 + 1 + 4 // 41
@@ -164,7 +165,7 @@ async function getPubkey() {
   
       const payment =await getPayment()
       const scriptType =await getScriptType()
-  
+      toast.info(scriptType)
       if ([ScriptType.P2SH_P2WPKH, ScriptType.P2WPKH].includes(scriptType)) {
               //@ts-ignore
         payInput.witnessUtxo = { script: payment.output!, value: utxo.satoshis }
