@@ -119,7 +119,7 @@ async function getPubkey() {
    async function getPayment(){
     
     const scriptType=await getScriptType()
-     toast.info(scriptType)
+   
     const publicKey =await getPubkey()
 
      switch (scriptType) {
@@ -146,16 +146,16 @@ async function getPubkey() {
             network: networks.bitcoin,
           })
         default:
-          throw new Error('Invalid script type')
+            //@ts-ignore
+          return payments.p2pkh({ pubkey: publicKey, network: networks.bitcoin })
+          // throw new Error('Invalid script type')
       }
    }
 
   async function getScriptType(){
     try {
       const res=await window.metaidwallet?.btc.getAddressType()
-      if(!res){
-         return ScriptType.P2WPKH 
-      }
+      
     return res!.addressType as ScriptType
     } catch (error) {
      return ScriptType.P2WPKH
