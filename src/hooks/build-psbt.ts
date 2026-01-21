@@ -153,10 +153,12 @@ async function getPubkey() {
   async function getScriptType(){
     try {
       const res=await window.metaidwallet?.btc.getAddressType()
+      if(!res){
+         return ScriptType.P2WPKH 
+      }
     return res!.addressType as ScriptType
     } catch (error) {
-      toast.error(error)
-      throw new Error(error)
+     return ScriptType.P2WPKH
     }
    }
 
