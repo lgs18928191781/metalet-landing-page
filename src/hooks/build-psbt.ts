@@ -101,6 +101,7 @@ export const useBuildPsbt = createGlobalState(() => {
 
 async function getPubkey() {
    const pukStr= await window.metaidwallet?.btc.getPublicKey()
+   toast.info(pukStr)
    let pubkeyBuffer: Buffer
     if (typeof pukStr === 'string') {
     // 如果是十六进制字符串，转换为 Buffer
@@ -356,7 +357,7 @@ async function getPubkey() {
   })=>{
     const btcjs=useBtcJsStore().get!
     const chainStore=useChainStore()
-    const rootStore=useRootStore()
+ 
     const {recipient}=params.buildPsbtParams
     let total = getTotalSatoshi(params.utxos)
     let psbt =await buildPsbt(params.buildPsbtParams,  params.utxos)
@@ -372,11 +373,9 @@ async function getPubkey() {
       )
   
      const psbtSignerRes= await window.metaidwallet?.btc.signPsbt({psbtHex:psbt.toHex(),options:{autoFinalized:true}})
-     toast.info(psbtSignerRes)
+   
      const payPsbt = btcjs.Psbt.fromHex(psbtSignerRes,{network:networks.bitcoin})
-     if(rootStore.isWebView){
-      payPsbt.finalizeAllInputs()
-     }
+  
      
      const payTxRaw = payPsbt.extractTransaction().toHex()
      const tx=await broadcast(payTxRaw,'btc')
